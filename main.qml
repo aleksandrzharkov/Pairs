@@ -31,6 +31,12 @@ Window {
                     id: cellItem
                     width: 48
                     height: 32
+                    property Cell cell: field.cellAt(index % field.width, index / field.width)
+
+                    Text {
+                        anchors.centerIn: parent
+                        text: cell.key
+                    }
                 }
             }
         }

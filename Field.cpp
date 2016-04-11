@@ -60,7 +60,7 @@ void Field::applySize()
     for (int y = 0; y < height(); ++y) {
         for (int x = 0; x < width(); ++x) {
             Cell *cell = new Cell(this);
-            cell->setKey(qrand() % 6);
+            cell->setKey(qrand() % (m_width * m_height / 2 ) % 6);
             m_cells.append(cell);
         }
     }
